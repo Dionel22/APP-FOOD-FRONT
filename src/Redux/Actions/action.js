@@ -123,11 +123,11 @@ export const filteredByDiets = (body) => {
       let params = {};
 
 			if (body.title) {
-				params.title = encodeURIComponent(body.titles);
+				params.titles = encodeURIComponent(body.titles);
 			}
 
 			if (body.diet) {
-				params.diet = encodeURIComponent(body.diets);
+				params.diets = encodeURIComponent(body.diets);
 			}
 
       const queryString = Object.entries(params)
@@ -137,7 +137,7 @@ export const filteredByDiets = (body) => {
       const response = await axios.get(`http://localhost:3001/filter?${queryString}`);
       return dispatch({
         type: GET_FILTER_BY_DIETS,
-        payload: response
+        payload: response.data
       })
     } catch (error) {
       alert(error.message)

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { useDispatch } from "react-redux"
 import { filteredByDiets, getByName } from '../../Redux/Actions/action'
 
-export default function SearchBar() {
+export default function SearchBar(props) {
     const [name, setName] = useState("");
     const dispatch = useDispatch();
   
