@@ -27,15 +27,15 @@ export default function Paginado({ pagina, allFoods, currentPagina, handlesPag }
     }
   
     return (
-      <div >
-        <button className={style.boton} onClick={handlesButtonPrev}>Prev</button>
+      <div className={style.div}>
+       { pageNumberArray.length !== 0?<button className={style.boton} onClick={handlesButtonPrev}>Prev</button>: null}
         {pageNumberArray?.map((e, i) => {
           return <button
             key={i}
             className={e === currentPageNumber ? style.boton : style.ahora}
             onClick={() => handlesButton(e)}>{e}</button>
         })}
-        <button className={style.boton} onClick={handlesButtonNext}>Next</button>
+       {pageNumberArray.length !== 0?<button className={style.boton} onClick={handlesButtonNext}>Next</button>: null}
       </div>
     )
 }

@@ -1,3 +1,10 @@
+.div{
+    display: flex;
+    position: relative;
+    left: 111px;
+    top: 33px;
+    width: 822px;
+}
 
 .boton{
     margin: 5px;

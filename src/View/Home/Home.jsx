@@ -62,7 +62,6 @@ export default function Home() {
         ) : (
           <Cards allFoods={allFoodsPag} />
         )}
-        <br />
 
         <Paginado
           currentPagina={currentPagina}
