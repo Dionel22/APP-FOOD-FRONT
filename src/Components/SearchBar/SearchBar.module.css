@@ -1,0 +1,37 @@
+.input{
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 2px;
+    width: 150px;
+   margin-right: 5px;
+
+}
+
+.select{
+    background-color: rgb(156, 49, 3);
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 15px;
+    justify-content: center;
+    outline: none;
+  }  
+
+.boton{
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: #ec861a;
+    color: white;
+}
+
+.div button:hover{
+    background-color: #fffffffa;
+    color: #ec861a;
+}
+
+.div button:active{
+    background-color: rgb(189, 23, 15);
+    color: azure;
+}
