@@ -6,6 +6,7 @@
     margin: 0px;
     width: 100vw;
     left: -35px;
+    top: -31px;
     background: #688827b5;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(20px);
@@ -26,6 +27,7 @@
     background-color: #ec861a;
     color: rgb(255, 255, 255);
     font-family: Heavitas;
+    font-size: 10px;
 }
 
 .div button:hover{

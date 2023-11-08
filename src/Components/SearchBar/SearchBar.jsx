@@ -64,7 +64,7 @@ export default function SearchBar(props) {
         <input
           className={style.input}
           type="text"
-          placeholder="busqueda..."
+          placeholder="search..."
           value={name.trim()}
           onChange={handleName}
         />
