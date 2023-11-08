@@ -4,6 +4,8 @@
     justify-content: space-around;
     align-items: center;
     margin: 0px;
+    width: 100vw;
+    left: -35px;
     background: #688827b5;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(20px);
