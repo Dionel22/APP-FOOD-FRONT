@@ -2,27 +2,26 @@ import React from 'react'
 import style from './SearchBar.module.css'
 import { useState, useEffect } from 'react'
 import { useDispatch } from "react-redux"
-import { filteredByDiets, getByName } from '../../Redux/Actions/action'
+import { filteredByDiets, getAllFoods, getByName } from '../../Redux/Actions/action'
 
 export default function SearchBar(props) {
-    const [name, setName] = useState("");
     const dispatch = useDispatch();
   
+      const [name, setName] = useState("");
       const [filtro, setFiltro] = useState({
-          title: "title",
+        title: "title",
         titles: "",
         api: "",
         diet: "diet",
-        diets: ""
+        diets: "",
+        asc: "asc",
+        ascs: ""
       });
-  console.log("filtros", filtro);
+  console.log("props", props);
       const handleName = (e) => {
           const { value } = e.target;
-          setFiltro({
-              ...filtro,
-              titles: value,
-          });
-          //setPage(1);
+          setName(value);
+          props.pagina(1);
       };
   
       //diet
@@ -32,29 +31,42 @@ export default function SearchBar(props) {
               ...filtro,
               diets: value
           });
-          //setPage(1);
+          props.pagina(1);
       };
   
+      const handlesOrdenByAseAndDec = (event) => {
+        const { value } = event.target;
+        setFiltro({
+            ...filtro,
+            ascs: value
+        });
+        props.pagina(1);
+      }
   
       useEffect(() => {
           dispatch(filteredByDiets(filtro));
       }, [filtro, dispatch]);
   
       const handleReset = () => {
-          dispatch(getAllBooks());
+          dispatch(getAllFoods());
           setFiltro({
         title: "title",
         titles: "",
         api: "",
         diet: "diet",
-        diets: ""
+        diets: "",
+        asc: "asc",
+        ascs: ""
           });
-          //setPage(1);
+          props.pagina(1);
       };
-  console.log("propss", props);
+
     const handlesSubmit = (event) => {
       event.preventDefault()
-      dispatch(getByName(name))
+      setFiltro({
+        ...filtro,
+        titles: name.trim()
+      })
       setName("")
       props.pagina(1)
     }
@@ -65,12 +77,17 @@ export default function SearchBar(props) {
           className={style.input}
           type="text"
           placeholder="search..."
-          value={name.trim()}
+          value={name}
           onChange={handleName}
         />
         <button className={style.boton} onClick={handlesSubmit}>Buscar</button>
   
-  
+           {/*ORDEN POR ASC Y DEC*/}
+        <select className={style.Alphabetic} defaultValue='msg' onChange={handlesOrdenByAseAndDec}>
+          <option value="msg" disabled>Alphabetic</option>
+          <option value="asc">A-Z</option>
+          <option value="desc">Z-A</option>
+        </select>
   
           {/*ORDEN POR DIETA*/}
           <select className={style.select} defaultValue='msg' onChange={handlesOrdenByDiets}>
@@ -89,7 +106,7 @@ export default function SearchBar(props) {
   
    
           {/*RESETEA*/}
-          <button className={style.select} onClick={handleReset}>Reset</button>
+          <button className={style.reset} onClick={handleReset}>Reset</button>
       </div>
     )
 }

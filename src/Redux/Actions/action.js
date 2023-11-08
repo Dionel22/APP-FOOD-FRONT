@@ -48,7 +48,7 @@ export const getReset = () => {
 export const getAllDiets = () => {
   return async (dispatch) => {
     try {
-      const response = (await axios.get(`http://localhost:3001/diets`)).data
+      const response = (await axios.get(`http://localhost:3001/diet`)).data
     return dispatch({
       type: GET_DIETS,
       payload: response
@@ -118,7 +118,7 @@ export const ordenByDiets = (value) => {
 //fitros de dieta y si es api o db
 export const filteredByDiets = (body) => {
   return async (dispatch) => {
-    console.log("body filter", body);
+    //console.log("body filter", body);
     try {
       let params = {};
 
@@ -130,11 +130,16 @@ export const filteredByDiets = (body) => {
 				params.diets = encodeURIComponent(body.diets);
 			}
 
+			if (body.asc) {
+				params.ascs = encodeURIComponent(body.ascs);
+			}
+
       const queryString = Object.entries(params)
 				.map(([key, value]) => `${key}=${value}`)
 				.join("&");
 
       const response = await axios.get(`http://localhost:3001/filter?${queryString}`);
+      //console.log("filtror", response.data);
       return dispatch({
         type: GET_FILTER_BY_DIETS,
         payload: response.data

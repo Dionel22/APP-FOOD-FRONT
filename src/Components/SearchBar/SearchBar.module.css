@@ -1,14 +1,19 @@
 .input{
+    display: grid;
+    position: relative;
     outline: none;
     border-radius: 5px;
     border: 1px solid rgb(0, 0, 0);
     padding: 2px;
-    width: 150px;
-   margin-right: 5px;
-
+    width: 170px;
+    height: 22px;
+    margin-right: 5px;
+    bottom: -85px;
 }
 
 .select{
+    display: grid;
+    position: relative;
     background-color: rgb(156, 49, 3);
     color: white;
     border: 1px solid black;
@@ -18,15 +23,53 @@
     outline: none;
     font-size: 13px;
     padding: 4px;
+    top: 18px;
+    right: 335px;
+  }  
+.Alphabetic{
+    display: grid;
+    position: relative;
+    background-color: rgb(156, 49, 3);
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 15px;
+    justify-content: center;
+    outline: none;
+    font-size: 13px;
+    padding: 4px;
+    top: 58px;
+    right: 465px;
   }  
 
+.reset{
+    display: grid;
+    position: relative;
+    background-color: rgb(156, 49, 3);
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 15px;
+    justify-content: center;
+    outline: none;
+    font-size: 13px;
+    padding: 4px;
+    top: -24px;
+    left: -150px;
+  }  
+
+
 .boton{
+    display: grid;
+    position: relative;
     outline: none;
     border-radius: 5px;
     border: 1px solid black;
     background-color: #ec861a;
     color: white;
     font-size: 10px;
+    bottom: -58px;
+    left: 181px;
 }
 
 .div button:hover{

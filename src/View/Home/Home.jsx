@@ -14,7 +14,7 @@ export default function Home() {
     const currentPagina = 9;
     const nextPagina = pagina * currentPagina;
     const lastPagina = nextPagina - currentPagina;
-    console.log("allFoods", allFoods)
+    //console.log("allFoods", allFoods)
     const allFoodsPag = allFoods.msg ? allFoods : allFoods.slice(lastPagina, nextPagina);
   
   
@@ -48,8 +48,17 @@ export default function Home() {
             handlesPagNext={handlesPagNext}
             pagina={pagina}
           />
-  
+  <br />
           <Cards allFoods={allFoodsPag} />
+          <br />
+          <Paginado
+            currentPagina={currentPagina}
+            allFoods={allFoods.length}
+            handlesPag={handlesPag}
+            handlesPagNext={handlesPagNext}
+            pagina={pagina}
+          />
+  
         </div>
       </>
     )
