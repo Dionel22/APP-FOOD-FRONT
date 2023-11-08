@@ -18,7 +18,7 @@ export default function SearchBar(props) {
     ascs: "",
   });
 
-  console.log("props", props);
+  //console.log("props", props);
   const handleName = (e) => {
     const { value } = e.target;
     setName(value);
