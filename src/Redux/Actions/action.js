@@ -17,8 +17,9 @@ import {
 export const getAllFoods = () => {
   return async (dispatch) => {
     try {
-      const response = (await axios.get('http://localhost:3001/recipe')).data;
-      console.log('aa', response);
+      const response = (await axios.get('https://app-foods.onrender.com/recipe')).data;
+      //const response = (await axios.get('http://localhost:3001/recipe')).data;
+      //console.log('aa', response);
       return dispatch({
         type: All_FOOD,
         payload: response,
@@ -48,7 +49,8 @@ export const getReset = () => {
 export const getAllDiets = () => {
   return async (dispatch) => {
     try {
-      const response = (await axios.get(`http://localhost:3001/diet`)).data
+     // const response = (await axios.get(`http://localhost:3001/diet`)).data
+      const response = (await axios.get(`https://app-foods.onrender.com/diet`)).data
     return dispatch({
       type: GET_DIETS,
       payload: response
@@ -65,7 +67,8 @@ export const getAllDiets = () => {
 export const getByName = (name) => {
   return async (dispatch) => {
     // console.log("hshs")
-    const response = (await axios.get(`http://localhost:3001/recipe?name=${name}`)).data
+    //const response = (await axios.get(`http://localhost:3001/recipe?name=${name}`)).data
+    const response = (await axios.get(`https://app-foods.onrender.com/recipe?name=${name}`)).data
     // console.log("<xc", response)
     return dispatch({
       type: GET_BY_NAME,
@@ -138,7 +141,8 @@ export const filteredByDiets = (body) => {
 				.map(([key, value]) => `${key}=${value}`)
 				.join("&");
 
-      const response = await axios.get(`http://localhost:3001/filter?${queryString}`);
+      //const response = await axios.get(`http://localhost:3001/filter?${queryString}`);
+      const response = await axios.get(`https://app-foods.onrender.com/filter?${queryString}`);
       //console.log("filtror", response.data);
       return dispatch({
         type: GET_FILTER_BY_DIETS,
@@ -155,7 +159,8 @@ export const filteredByDiets = (body) => {
 export const getDetail = (id) => {
   return async (dispatch) => {
     try {
-      const response = (await axios.get(`http://localhost:3001/recipe/${id}`)).data
+      const response = (await axios.get(`https://app-foods.onrender.com/recipe/${id}`)).data
+      //const response = (await axios.get(`http://localhost:3001/recipe/${id}`)).data
       //console.log("de",response)
       return dispatch({
         type: GET_DETAIL,
@@ -183,7 +188,8 @@ export const getDesmonta = () => {
 //crea food
 export const createFood = (body) => {
   return async (dispatch) => {
-    await axios.post(`http://localhost:3001/recipe`, body)
+    //await axios.post(`http://localhost:3001/recipe`, body)
+    await axios.post(`https://app-foods.onrender.com/recipe`, body)
     //console.log("de",response)
     return dispatch({
       type: POST_FOOD,
