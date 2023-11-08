@@ -17,8 +17,8 @@ import {
 export const getAllFoods = () => {
   return async (dispatch) => {
     try {
-      const response = (await axios.get('https://app-foods.onrender.com/recipe')).data;
-      //const response = (await axios.get('http://localhost:3001/recipe')).data;
+      //const response = (await axios.get('https://app-foods.onrender.com/recipe')).data;
+      const response = (await axios.get('http://localhost:3001/recipe')).data;
       //console.log('aa', response);
       return dispatch({
         type: All_FOOD,
@@ -30,7 +30,7 @@ export const getAllFoods = () => {
       // Podrías despachar una acción para manejar el error en tu estado global si lo deseas
       return dispatch({
         type: All_FOOD,
-        payload: { msg: `Error al obtener los alimentos: ${error.message}` },
+        payload: { msg: `Error al obtener los alimentos: ${error.status}` },
       });
     }
   };
@@ -49,8 +49,8 @@ export const getReset = () => {
 export const getAllDiets = () => {
   return async (dispatch) => {
     try {
-     // const response = (await axios.get(`http://localhost:3001/diet`)).data
-      const response = (await axios.get(`https://app-foods.onrender.com/diet`)).data
+      const response = (await axios.get(`http://localhost:3001/diet`)).data
+      //const response = (await axios.get(`https://app-foods.onrender.com/diet`)).data
     return dispatch({
       type: GET_DIETS,
       payload: response
@@ -141,13 +141,16 @@ export const filteredByDiets = (body) => {
 				.map(([key, value]) => `${key}=${value}`)
 				.join("&");
 
-      //const response = await axios.get(`http://localhost:3001/filter?${queryString}`);
-      const response = await axios.get(`https://app-foods.onrender.com/filter?${queryString}`);
-      //console.log("filtror", response.data);
-      return dispatch({
-        type: GET_FILTER_BY_DIETS,
-        payload: response.data
-      })
+                if(body.titles !== "" || body.diets !== "" || body.ascs){
+
+                    const response = await axios.get(`http://localhost:3001/filter?${queryString}`);
+                    //const response = await axios.get(`https://app-foods.onrender.com/filter?${queryString}`);
+                    //console.log("filtror", response.data);
+                    return dispatch({
+                      type: GET_FILTER_BY_DIETS,
+                      payload: response.data
+                    })
+                }
     } catch (error) {
       alert(error.message)
       console.log("error",error)
@@ -188,8 +191,8 @@ export const getDesmonta = () => {
 //crea food
 export const createFood = (body) => {
   return async (dispatch) => {
-    //await axios.post(`http://localhost:3001/recipe`, body)
-    await axios.post(`https://app-foods.onrender.com/recipe`, body)
+    await axios.post(`http://localhost:3001/recipe`, body)
+    //await axios.post(`https://app-foods.onrender.com/recipe`, body)
     //console.log("de",response)
     return dispatch({
       type: POST_FOOD,

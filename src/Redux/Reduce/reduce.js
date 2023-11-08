@@ -32,7 +32,7 @@ const reduce = (state = inicialState, action) => {
         case RESET:
             return {
                 ...state,
-                allFoods: state.allFoodsCopy,
+                allFoodsCopy: state.allFoods,
             }
         case GET_DIETS:
             return {
