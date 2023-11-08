@@ -28,7 +28,7 @@ export default function DetailPage() {
             <h2 className={style.name}>{detail.title}</h2>
             <img className={style.image} src={detail.image} alt={detail.title} />
             <h2 className={style.Hsummary}>Summary</h2>
-            <p className={style.summary}>{detail.summary}</p>
+            <p className={style.summary}>{detail.summary.replace(/<[^>]*>/g, "")}</p>
             <h3 className={style.healthScore}>Health Score: {detail.healthScore}</h3>
             <h3 className={style.Hdiet}>Diets</h3>
             {detail.diets?.map((e, i) => {

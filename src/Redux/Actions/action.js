@@ -17,8 +17,8 @@ import {
 export const getAllFoods = () => {
   return async (dispatch) => {
     try {
-      const response = (await axios.get('http://localhost:3001/recipes')).data;
-      //console.log('aa', data);
+      const response = (await axios.get('http://localhost:3001/recipe')).data;
+      console.log('aa', response);
       return dispatch({
         type: All_FOOD,
         payload: response,
@@ -65,7 +65,7 @@ export const getAllDiets = () => {
 export const getByName = (name) => {
   return async (dispatch) => {
     // console.log("hshs")
-    const response = (await axios.get(`http://localhost:3001/recipes?name=${name}`)).data
+    const response = (await axios.get(`http://localhost:3001/recipe?name=${name}`)).data
     // console.log("<xc", response)
     return dispatch({
       type: GET_BY_NAME,
@@ -134,7 +134,7 @@ export const filteredByDiets = (body) => {
 				.map(([key, value]) => `${key}=${value}`)
 				.join("&");
 
-      const response = await axios.get(`http://localhost:3001/filtered?${queryString}`);
+      const response = await axios.get(`http://localhost:3001/filter?${queryString}`);
       return dispatch({
         type: GET_FILTER_BY_DIETS,
         payload: response
@@ -150,7 +150,7 @@ export const filteredByDiets = (body) => {
 export const getDetail = (id) => {
   return async (dispatch) => {
     try {
-      const response = (await axios.get(`http://localhost:3001/recipes/${id}`)).data
+      const response = (await axios.get(`http://localhost:3001/recipe/${id}`)).data
       //console.log("de",response)
       return dispatch({
         type: GET_DETAIL,
@@ -178,7 +178,7 @@ export const getDesmonta = () => {
 //crea food
 export const createFood = (body) => {
   return async (dispatch) => {
-    await axios.post(`http://localhost:3001/recipes`, body)
+    await axios.post(`http://localhost:3001/recipe`, body)
     //console.log("de",response)
     return dispatch({
       type: POST_FOOD,
