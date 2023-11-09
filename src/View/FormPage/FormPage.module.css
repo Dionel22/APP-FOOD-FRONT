@@ -368,6 +368,7 @@
     top: 447px;
     left: 241px;
     font-size: 15px;
+    color: black;
     padding: 0 2px;
     text-shadow: 2px 2px #e5cd6e, -2px -2px #e5cd6efa, 2px -2px #e5cd6efb, -2px 2px #e5cd6e;
     font-family: Insaniburger;
@@ -401,6 +402,7 @@
     top: 447px;
     left: 335px;
     font-size: 15px;
+    color: black;
     padding: 0 2px;
     text-shadow: 2px 2px #e5cd6e, -2px -2px #e5cd6efa, 2px -2px #e5cd6efb, -2px 2px #e5cd6e;
     font-family: Insaniburger;
@@ -463,6 +465,7 @@
     right: 470px;
     top: 700px;
     padding: 0 2px;
+    color: black;
     text-shadow: 2px 2px #e5cd6e, -2px -2px #e5cd6efa, 2px -2px #e5cd6efb, -2px 2px #e5cd6e;
     font-family: Insaniburger;
     font-size: 30px;
@@ -532,7 +535,7 @@
     display: flex;
     position: absolute;
     margin: 2px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-family: Insaniburger;
     outline: none;
     left: 227px;
@@ -593,12 +596,14 @@
     display: flex;
     position: absolute;
     left: -150px;
+    top: 51px;
 }
 
 .tenedor {
     display: flex;
     position: absolute;
-    left: 470px;
+    left: 476px;
+    top: 61px;
 }
 
 .gorro {
