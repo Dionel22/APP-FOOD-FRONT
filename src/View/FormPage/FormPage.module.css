@@ -618,3 +618,629 @@
     left: 420px;
     width: 33px;
 }
+
+/*------responsive---------------*/
+
+@media (max-width: 640px){
+    .div {
+        display: flex;
+        position: relative;
+        border-radius: 108px 0;
+        background-color: #e5cd6e;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(20px);
+        
+        border: 5px solid #e15606;
+        margin: 5px;
+        margin-top: 10px;
+        width: 540px;
+        height: 640px;
+        left: 3%;
+        box-shadow: 3px 3px 3px 3px rgba(14, 14, 14, 0.458);
+    }
+    
+    .foo {
+        background-color: black;
+        margin-top: 30px;
+        height: 25px;
+    }
+    
+    .H {
+        display: flex;
+        position: relative;
+        color: white;
+        font-size: 12px;
+        top: 5px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .create {
+        display: flex;
+    position: relative;
+    color: rgb(0, 0, 0);
+    font-size: 32px;
+    top: 7px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Insaniburger;
+    left: 66%;
+    }
+    
+    .create_Boton {
+        display: grid;
+        position: absolute;
+        top: 95%;
+        left: 43%;
+        background-color: blue;
+        color: white;
+        border-radius: 5px;
+        font-size: 20px;
+        font-family: Insaniburger;
+    }
+    
+    .create_Boton:hover {
+        outline-offset: 3px;
+        background-color: aqua;
+        color: black;
+    }
+    
+    /*---------Title------------*/
+    
+    .input_field_title {
+        position: absolute;
+    }
+    
+    .input_field_title .inputTitle {
+        width: 249px;
+        height: 50px;
+        border-radius: 6px;
+        font-size: 18px;
+        padding: 0 15px;
+        border: 2px solid #000000;
+        background-color: transparent;
+        color: #000000;
+        outline: none;
+        left: 123px;
+        margin-top: 10px;
+        display: flex;
+        position: absolute;
+    }
+    
+    .input_field_title .labelTitle {
+        position: absolute;
+    top: 35px;
+    left: 147px;
+    transform: translateY(-50%);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    pointer-events: none;
+    font-family: Insaniburger;
+    
+    }
+    
+    .inputTitle:focus~.labelTitle {
+        position: absolute;
+        top: 10px;
+        left: 125px;
+        font-size: 17px;
+        padding: 0 2px;
+        text-shadow: 2px 2px #e5cd6e, -2px -2px #e5cd6efa, 2px -2px #e5cd6efb, -2px 2px #e5cd6e;
+    }
+    
+    .pTitle {
+        display: flex;
+        position: absolute;
+        color: rgb(255, 255, 255);
+        font-family: Insaniburger;
+        outline: none;
+        left: 120px;
+        top: 68px;
+        margin: 5px;
+        font-size: 15px;
+        background-color: red;
+        height: 30px;
+        width: 285px;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .titleTop {
+        position: relative;
+        bottom: 2px;
+        left: 128px;
+        font-size: 17px;
+        color: black;
+        padding: 0 2px;
+        text-shadow: 2px 2px #e5cd6e, -2px -2px #e5cd6efa, 2px -2px #e5cd6efb, -2px 2px #e5cd6e;
+        font-family: Insaniburger;
+    }
+    
+    /*--------------SUMMARY--------------------------*/
+    
+    .input_field_summary {
+        position: absolute;
+    }
+    
+    .summaryTop {
+        position: relative;
+        top: 116px;
+        left: 245px;
+        font-size: 17px;
+        color: black;
+        padding: 0 2px;
+        text-shadow: 2px 2px #e5cd6e, -2px -2px #e5cd6efa, 2px -2px #e5cd6efb, -2px 2px #e5cd6e;
+        font-family: Insaniburger;
+    }
+    
+    .input_field_summary .inputSummary {
+    
+        width: 350px;
+        height: 50px;
+        border-radius: 6px;
+        font-size: 17px;
+        padding: 0 15px;
+        border: 2px solid #000000;
+        background-color: transparent;
+        color: #000000;
+        outline: none;
+        left: 235px;
+        margin-top: 10px;
+        display: flex;
+        position: absolute;
+        top: 120px;
+    }
+    
+    .input_field_summary .labelSummary {
+        position: absolute;
+        top: 155px;
+        left: 247px;
+        transform: translateY(-50%);
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        pointer-events: none;
+        font-family: Insaniburger;
+    
+    }
+    
+    .inputSummary:focus~.labelSummary {
+        position: absolute;
+        top: 128px;
+        left: 245px;
+        font-size: 17px;
+        padding: 0 2px;
+        text-shadow: 2px 2px #e5cd6e, -2px -2px #e5cd6efa, 2px -2px #e5cd6efb, -2px 2px #e5cd6e;
+    }
+    
+    .pSummary {
+        display: flex;
+        position: absolute;
+        margin: 2px;
+        color: rgb(255, 255, 255);
+        font-family: Insaniburger;
+        outline: none;
+        left: 227px;
+        top: 187px;
+        margin: 5px;
+        font-size: 15px;
+        background-color: red;
+        height: 30px;
+        width: 387px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 10px;
+    }
+    
+    /*--------------Health---Score--------------------------*/
+    
+    .input_field_healthScore {
+        position: absolute;
+    }
+    
+    .HealthScoreTop {
+        position: relative;
+        top: 225px;
+        left: 237px;
+        color: black;
+        font-size: 17px;
+        padding: 0 2px;
+        text-shadow: 2px 2px #e5cd6e, -2px -2px #e5cd6efa, 2px -2px #e5cd6efb, -2px 2px #e5cd6e;
+        font-family: Insaniburger;
+    }
+    
+    .input_field_healthScore .inputHealthScore {
+    
+        width: 350px;
+        height: 50px;
+        border-radius: 6px;
+        font-size: 17px;
+        padding: 0 15px;
+        border: 2px solid #000000;
+        background-color: transparent;
+        color: #000000;
+        outline: none;
+        left: 235px;
+        margin-top: 10px;
+        display: flex;
+        position: absolute;
+        top: 230px;
+    }
+    
+    .input_field_healthScore .labelHealthScore {
+        position: absolute;
+        top: 265px;
+        left: 245px;
+        transform: translateY(-50%);
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        pointer-events: none;
+        font-family: Insaniburger;
+        width: 130px;
+    }
+    
+    .inputHealthScore:focus~.labelHealthScore {
+        top: 238px;
+        left: 237px;
+        font-size: 17px;
+        color: black;
+        padding: 0 2px;
+        text-shadow: 2px 2px #e5cd6e, -2px -2px #e5cd6efa, 2px -2px #e5cd6efb, -2px 2px #e5cd6e;
+    }
+    
+    .pHealthScore {
+        display: flex;
+        position: absolute;
+        margin: 2px;
+        color: rgb(255, 255, 255);
+        font-family: Insaniburger;
+        outline: none;
+        left: 227px;
+        top: 297px;
+        margin: 5px;
+        font-size: 13px;
+        background-color: red;
+        height: 30px;
+        width: 387px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 10px;
+    }
+    
+    /*--------------Image--------------------------*/
+    
+    .input_field_Image {
+        position: absolute;
+    }
+    
+    .ImageTop {
+        position: relative;
+        top: 337px;
+        left: 238px;
+        font-size: 17px;
+        color: black;
+        padding: 0 2px;
+        text-shadow: 2px 2px #e5cd6e, -2px -2px #e5cd6efa, 2px -2px #e5cd6efb, -2px 2px #e5cd6e;
+        font-family: Insaniburger;
+    }
+    
+    .input_field_Image .inputImage {
+        width: 350px;
+        height: 50px;
+        border-radius: 6px;
+        font-size: 17px;
+        padding: 0 15px;
+        border: 2px solid #000000;
+        background-color: #e5cd6e;
+        color: #000000;
+        outline: none;
+        left: 235px;
+        margin-top: 10px;
+        display: flex;
+        position: absolute;
+        top: 341px;
+    }
+    
+    .input_field_Image .labelImage {
+        position: absolute;
+        top: 375px;
+        left: 245px;
+        transform: translateY(-50%);
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        pointer-events: none;
+        font-family: Insaniburger;
+        width: 130px;
+    }
+    
+    .inputImage:focus~.labelImage {
+        top: 349px;
+        left: 238px;
+        font-size: 17px;
+        padding: 0 2px;
+        text-shadow: 2px 2px #e5cd6e, -2px -2px #e5cd6efa, 2px -2px #e5cd6efb, -2px 2px #e5cd6e;
+    }
+    
+    .pImage {
+        display: flex;
+        position: absolute;
+        margin: 2px;
+        color: rgb(255, 255, 255);
+        font-family: Insaniburger;
+        outline: none;
+        left: 227px;
+        top: 407px;
+        margin: 5px;
+        font-size: 13px;
+        background-color: red;
+        height: 30px;
+        width: 387px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 10px;
+    }
+    
+    /*--------------Steps--Number--------------------------*/
+    
+    .input_field_Steps_Number {
+        position: absolute;
+    }
+    
+    .StepsNumberTop {
+        position: relative;
+        top: 447px;
+        left: 241px;
+        font-size: 15px;
+        color: black;
+        padding: 0 2px;
+        text-shadow: 2px 2px #e5cd6e, -2px -2px #e5cd6efa, 2px -2px #e5cd6efb, -2px 2px #e5cd6e;
+        font-family: Insaniburger;
+    }
+    
+    .input_field_Steps_Number .inputStepsNumber {
+        width: 30px;
+        height: 50px;
+        border-radius: 6px;
+        font-size: 17px;
+        padding: 0 15px;
+        border: 2px solid #000000;
+        background-color: #e5cd6e;
+        color: #000000;
+        outline: none;
+        left: 235px;
+        margin-top: 10px;
+        display: flex;
+        position: absolute;
+        top: 449px;
+        text-align: center;
+    }
+    
+    /*--------------Steps----------------------*/
+    .input_field_Steps {
+        position: absolute;
+    }
+    
+    .StepsTop {
+        position: relative;
+        top: 447px;
+        left: 335px;
+        font-size: 15px;
+        color: black;
+        padding: 0 2px;
+        text-shadow: 2px 2px #e5cd6e, -2px -2px #e5cd6efa, 2px -2px #e5cd6efb, -2px 2px #e5cd6e;
+        font-family: Insaniburger;
+    }
+    
+    .input_field_Steps .inputSteps {
+        width: 250px;
+        height: 50px;
+        border-radius: 6px;
+        font-size: 17px;
+        padding: 0 15px;
+        border: 2px solid #000000;
+        background-color: #e5cd6e;
+        color: #000000;
+        outline: none;
+        left: 330px;
+        margin-top: 10px;
+        display: flex;
+        position: absolute;
+        top: 449px;
+        text-align: center;
+    }
+    
+    
+    .boton_steps {
+        position: absolute;
+        border-radius: 5px;
+        border: 1px solid black;
+        left: 629px;
+        top: 563px;
+        font-family: Insaniburger;
+        background-color: #307f09;
+        color: white;
+        font-size: 20px;
+    }
+    
+    .boton_steps:hover {
+        outline-offset: 3px;
+        background-color: rgb(255, 255, 255);
+        color: rgb(4, 4, 4);
+    }
+    
+    /*-----------Boton---Delete--Steps------------*/
+    .boton_delete_steps {
+        display: grid;
+        position: absolute;
+        border-radius: 5px;
+        border: 2px solid black;
+        left: 225px;
+        top: 745px;
+        height: 420px;
+        font-family: Insaniburger;
+        background-color: #dc4a11;
+        width: 600px;
+        margin: 5px;
+    }
+    
+    .labelDeleteSteps {
+        position: absolute;
+        right: 470px;
+        top: 710px;
+        padding: 0 2px;
+        color: black;
+        text-shadow: 2px 2px #e5cd6e, -2px -2px #e5cd6efa, 2px -2px #e5cd6efb, -2px 2px #e5cd6e;
+        font-family: Insaniburger;
+        font-size: 30px;
+    }
+    
+    .steps {
+        display: flex;
+        position: relative;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        width: 580px;
+        left: 3px;
+        margin: 7px;
+        font-size: 10px;
+        border-radius: 2px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+    
+    .boton_delete_steps span:hover {
+        background-color: #fffffffa;
+        color: rgb(0, 0, 0);
+    }
+    
+    
+    .pSteps {
+        display: flex;
+        position: absolute;
+        margin: 2px;
+        color: rgb(255, 255, 255);
+        font-family: Insaniburger;
+        outline: none;
+        left: 229px;
+        top: 615px;
+        margin: 5px;
+        font-size: 13px;
+        background-color: red;
+        height: 30px;
+        width: 387px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 10px;
+    }
+    
+    /*----------Diets-----------*/
+    
+    .input_field_Diets {
+        position: absolute;
+    }
+    
+    .input_field_Diets .labelDiets {
+        position: absolute;
+        top: 1035px;
+        left: 395px;
+        transform: translateY(-50%);
+        color: rgb(0, 0, 0);
+        font-size: 30px;
+        pointer-events: none;
+        font-family: Insaniburger;
+        width: 130px;
+    }
+    
+    
+    .pDiets {
+        display: flex;
+        position: absolute;
+        margin: 2px;
+        color: rgb(0, 0, 0);
+        font-family: Insaniburger;
+        outline: none;
+        left: 227px;
+        top: 1217px;
+        margin: 5px;
+        font-size: 13px;
+        background-color: red;
+        height: 30px;
+        width: 387px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 10px;
+    }
+    
+    /*----------boton--Delete--Diets--------*/
+    .boton_delete_Diets {
+        display: grid;
+        position: absolute;
+        left: 156px;
+        top: 1050px;
+        height: 130px;
+        font-family: Insaniburger;
+        width: 600px;
+        height: 160px;
+        margin: 3px;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 0px;
+    }
+    
+    .boton_diets {
+        position: relative;
+        background-color: #307f09;
+        color: rgb(255, 255, 255);
+        font-size: 11px;
+        margin: 2px;
+        width: 155px;
+        height: 23px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+    
+    .label_diets {
+        position: relative;
+        color: rgb(255, 255, 255);
+        font-size: 11px;
+        margin: 2px;
+        bottom: 2px;
+    }
+    
+    /*------img-------*/
+    .cuchillo {
+        display: flex;
+        position: absolute;
+        left: -33px;
+        top: 83px;
+        width: 183px;
+    }
+    
+    .tenedor {
+        display: flex;
+        position: absolute;
+        left: 476px;
+        top: 61px;
+    }
+    
+    .gorro {
+        display: flex;
+        position: absolute;
+        top: 5px;
+        left: 270px;
+        width: 33px;
+    }
+}
