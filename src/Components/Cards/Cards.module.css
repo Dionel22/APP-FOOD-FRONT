@@ -8,10 +8,10 @@
 
 @media (max-width: 640px){
     .card_list{
-        width: 85vw;
-        margin: 21px -12px 0px 84px;
+        width: 39vw;
+        margin: 22px -12px -1px 42px;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-gap: 20px;
+        grid-gap: 17px;
     }
 }
