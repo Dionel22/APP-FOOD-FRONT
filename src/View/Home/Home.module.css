@@ -10,8 +10,9 @@
     display: inline-block;
     width: 100px;
     height: 100px;
+    left: 100px;
     border: 8px solid #f3f3f3; /* Light gray border */
-    border-top: 8px solid #3498db; /* Blue border (cambia el color a tu gusto) */
+    border-top: 8px solid #053454; /* Blue border (cambia el color a tu gusto) */
     border-radius: 50%;
     animation: spin 2s linear infinite;
   }
@@ -20,7 +21,7 @@
     margin-top: 20px;
     font-size: 24px;
     font-weight: bold;
-    color: #3498db; /* Color del texto (cambia el color a tu gusto) */
+    color: #ffffff; /* Color del texto (cambia el color a tu gusto) */
   }
   
   @keyframes spin {
