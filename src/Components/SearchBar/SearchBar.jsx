@@ -2,10 +2,12 @@ import React from "react";
 import style from "./SearchBar.module.css";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { filteredByDiets, getAllFoods, getReset } from "../../Redux/Actions/action";
+import { useLocation } from "react-router-dom";
+import { filteredByDiets,  getReset } from "../../Redux/Actions/action";
 
 export default function SearchBar(props) {
   const dispatch = useDispatch();
+  const location = useLocation();
 
   const [name, setName] = useState("");
   const [filtro, setFiltro] = useState({
@@ -79,17 +81,16 @@ export default function SearchBar(props) {
   return (
     <div className={style.div}>
       <input
-        className={style.input}
+        className={location.pathname === "/home"?style.input:style.inputS}
         type="text"
         placeholder="search..."
         value={name}
         onChange={handleName}
       />
-      <button className={style.boton} onClick={handlesSubmit}>
+      <button className={location.pathname === "/home"?style.boton:style.botonS} onClick={handlesSubmit}>
         Buscar
       </button>
-
-      {/*ORDEN POR ASC Y DEC*/}
+{location.pathname === "/home"&&(
       <select
         className={style.Alphabetic}
         value={filtro.ascs}
@@ -100,9 +101,9 @@ export default function SearchBar(props) {
         </option>
         <option value="asc">A-Z</option>
         <option value="desc">Z-A</option>
-      </select>
+      </select>)}
 
-      {/*ORDEN POR DIETA*/}
+    {location.pathname === "/home"&&(
       <select
         className={style.select}
         value={filtro.diets}
@@ -121,12 +122,12 @@ export default function SearchBar(props) {
         <option value="pescatarian">pescatarian</option>
         <option value="ketogenic">ketogenicl</option>
         <option value="fodmap friendly">fodmap friendly</option>
-      </select>
+      </select>)}
 
-      {/*RESETEA*/}
+    {location.pathname === "/home"&&(
       <button className={style.reset} onClick={handleReset}>
         Reset
-      </button>
+      </button>)}
     </div>
   );
 }

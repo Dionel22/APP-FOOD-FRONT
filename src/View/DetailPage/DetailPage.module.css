@@ -5,14 +5,13 @@
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(20px);
     border-radius: 20px;
-    margin: 10px;
+    margin: 20px;
     border: 6px solid rgb(231, 4, 4);
     width: 900px;
     height: 730px;
-    left: 75px;
+    left: 49px;
     box-shadow: 3px 3px 3px 3px rgba(14, 14, 14, 0.458);
     padding: 10px;
-    
 }
 
 .div1 {
@@ -36,13 +35,14 @@
     background-color: #53e106c7;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(20px);
-    border-radius: 20px;
+    border-radius: 9px;
     margin: 5px;
     border: 1px solid black;
     width: 500px;
     height: 330px;
     left: 40%;
-    top: 52%;
+    top: 53%;
+    padding: 3px;
 }
 
 .foo {
@@ -139,7 +139,7 @@
     display: grid;
     position: relative;
     font-family: Heavitas;
-    right: 18px;
+    right: -122px;
     top: 355px;
     width: 330px;
     margin: 5px;
@@ -164,8 +164,8 @@
     display: grid;
     position: absolute;
     font-family: Heavitas;
-    left: 49%;
-    top: 356px;
+    left: 57%;
+    top: 366px;
     width: 330px;
     margin: 5px;
     font-size: 20px;
